@@ -10,7 +10,7 @@ class Menufature {
     private $_gvlgariItem = array();
     private $_burberryItem = array();
 
-
+    //Import the csv file data and save it conveyor system belt array.
 
 
 
