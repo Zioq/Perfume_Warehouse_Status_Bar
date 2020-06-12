@@ -62,7 +62,7 @@ class Menufature {
 
             default:
                 echo "That item is unavailable perfume. Please contact manager";
-            break;
+            
 
         }
 
