@@ -7,7 +7,7 @@ class Menufature {
 
     private static $_jomaloneItem = array();
     private static $_diqtyqueItem = array();
-    private static $_gvlgariItem = array();
+    private static $_bvlgariItem = array();
     private static $_burberryItem = array();
 
 
@@ -18,7 +18,7 @@ class Menufature {
         }
 
         foreach($bvlgariPerfumes as $bgp){
-            self::$_gvlgariItem[] =$bgp;
+            self::$_bvlgariItem[] =$bgp;
         }
         
         foreach($diptyquePerfumes as $dp) {
@@ -36,7 +36,7 @@ class Menufature {
     public static function genRandomPerfume(): Perfume {
         
         //To generate random perfume child class
-        $perfumeType = rand(0,1);
+        $perfumeType = rand(0,3);
 
         switch($perfumeType) {
             //Jo Malone
@@ -44,10 +44,26 @@ class Menufature {
                 $p = new Jomalone();
                 $p->setName(self::$_jomaloneItem[rand(0,count(self::$_jomaloneItem)-1)]);
             break;
-            case 1: 
-                $p = new Jomalone();
-                $p->setName(self::$_jomaloneItem[rand(0,count(self::$_jomaloneItem)-1)]);
+
+            case 2: 
+                $p = new Diptyque();
+                $p->setName(self::$_diqtyqueItem[rand(0,count(self::$_diqtyqueItem)-1)]);
             break;
+
+            case 3:
+                $p = new Bvlgari();
+                $p->setName(self::$_bvlgariItem[rand(0,count(self::$_bvlgariItem)-1)]);
+            break;
+
+            case 4:
+                $p = new Burberry();
+                $p->setName(self::$_burberryItem[rand(0,count(self::$_burberryItem)-1)]);
+            break;
+
+            default:
+                echo "That item is unavailable perfume. Please contact manager";
+            break;
+
         }
 
         $p->setVolume(rand(0,49));
