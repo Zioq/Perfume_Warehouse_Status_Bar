@@ -3,12 +3,13 @@
 
 class Page  {
 
-    static private $_title ="";
+    static private $_title = "";
 
     static public function setTitle(string $title) {
-        self::$_title =$title;
+        self::$_title = $title;
     }
-    static function header($title)    {  ?>
+
+    static public function header() { ?>
 
         <!doctype html>
         <html lang="en">
@@ -18,14 +19,15 @@ class Page  {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
             <!-- Bootstrap CSS -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-            <title><?php echo $title ?></title>
+            <title><?php echo self::$_title; ?></title>
         </head>
         <body>
-            <h1><?php echo $title ?></h1>
+            <h1><?php echo self::$_title; ?></h1>
 
- <?php   }
+    <?php
+    }
 
     static function DisplayWarehouse(Array $stats) { ?>
             

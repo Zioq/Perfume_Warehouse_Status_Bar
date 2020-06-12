@@ -14,7 +14,6 @@ require_once("inc/FileAgent.class.php");
 require_once("inc/ItemParse.class.php");
 require_once("inc/Page.class.php");
 
-
 FileAgent::readFile(PERFUME_FILE);
 $fileContents = FileAgent::getFileContents();
 
@@ -33,6 +32,7 @@ $burberryPerfumes = ItemParse::getBurberryItems();
 Menufature::getPerfumes($jomalonePerfumes,$bvlgariPerfumes,$diptyquePerfumes,$burberryPerfumes);
 
 //Menufature::test();
+
 
 $p= Menufature::genRandomPerfume();
 var_dump($p);
