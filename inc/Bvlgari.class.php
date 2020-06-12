@@ -4,7 +4,7 @@ class Bvlgari extends Perfume {
 
     private $_type ="Bvlgari";
 
-    function getType():stirng {
+    function getType():string {
         return $this->_type;
     }
 }

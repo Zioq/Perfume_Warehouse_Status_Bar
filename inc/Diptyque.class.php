@@ -4,7 +4,7 @@ class Diptyque extends Perfume {
 
     private $_type = "Dip tyque"; 
 
-    function getType():stirng {
+    function getType():string {
         return $this->type = $_type;
     }
 

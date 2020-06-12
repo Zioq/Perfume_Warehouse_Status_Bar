@@ -4,7 +4,7 @@ class Jomalone extends Perfume {
 
     private $_type = "Jo Malone";
 
-    function getType(): stirng {
+    function getType(): string {
         return $this->_type;
     }
 

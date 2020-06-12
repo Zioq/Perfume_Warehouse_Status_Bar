@@ -22,7 +22,9 @@ class FileAgent {
         }
     }
 
-
+    public static function getFileContents(){
+        return self::$_fileContents;
+    }
 
 }
 
