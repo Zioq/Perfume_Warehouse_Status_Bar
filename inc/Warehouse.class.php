@@ -42,8 +42,8 @@ class Warehouse{
     // Function to add Item to Box 
     private function addJomalone(Jomalone $perfumeItem) {
         try {
-            if(count($jomaloneBox)<WAREHOUSE_CAPACITY) {
-                $jomaloneBox[] = $perfumeItem;
+            if(count($this->jomaloneBox)<WAREHOUSE_CAPACITY) {
+                $this->jomaloneBox[] = $perfumeItem;
             } else {
                 throw new Exception("Jomalone Box is full.");
             }
@@ -55,8 +55,8 @@ class Warehouse{
 
     private function addDiptyque(Diptyque $perfumeItem) {
         try {
-            if(count($diptyqueBox)<WAREHOUSE_CAPACITY) {
-                $diptyqueBox[] = $perfumeItem;
+            if(count($this->diptyqueBox)<WAREHOUSE_CAPACITY) {
+                $this->diptyqueBox[] = $perfumeItem;
             } else {
                 throw new Exception("Diptyque Box is full.");
             }
@@ -68,8 +68,8 @@ class Warehouse{
 
     private function addBvlgari(Bvlgari $perfumeItem) {
         try {
-            if(count($bvlgaribox)<WAREHOUSE_CAPACITY) {
-                $bvlgaribox[] = $perfumeItem;
+            if(count($this->bvlgaribox)<WAREHOUSE_CAPACITY) {
+                $this->bvlgaribox[] = $perfumeItem;
             } else {
                 throw new Exception("Bvlgari Box is full.");
             }
@@ -81,8 +81,8 @@ class Warehouse{
 
     private function addBurberry(Burberry $perfumeItem) {
         try {
-            if(count($burberrybox)<WAREHOUSE_CAPACITY) {
-                $burberrybox[] = $perfumeItem;
+            if(count($this->burberrybox)<WAREHOUSE_CAPACITY) {
+                $this->burberrybox[] = $perfumeItem;
             } else {
                 throw new Exception("Jomalone Box is full.");
             }

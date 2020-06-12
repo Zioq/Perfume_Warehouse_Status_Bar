@@ -35,7 +35,7 @@ class ItemParse {
                 $ex->getMasseage();
             }
         }
-        //var_dump(self::$_perfumesData);
+       
     }
 
     static function PerfumeArr() {

@@ -35,19 +35,19 @@ class Page  {
         <table>
             <tr>
                 <td>Jo Malone</td>
-                <td><progress value="<?php echo $stats["Jomlaone"];?>" max="<?php echo BIN_CAPACITY;?>"></td>
+                <td><progress value="<?php echo $stats["Jomlaone"]; ?>" max="<?php echo WAREHOUSE_CAPACITY; ?>"></td>
             </tr>
             <tr>
                 <td>Diptyque</td>
-                <td><progress value="<?php echo $stats["Diqtyque"]; ?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+                <td><progress value="<?php echo $stats["Diqtyque"]; ?>" max="<?php echo WAREHOUSE_CAPACITY; ?>"></td>
             </tr>
             <tr>
                 <td>Burberry</td>  
-                <td><progress value ="<?php echo $stats["Burberry"];?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+                <td><progress value ="<?php echo $stats["Burberry"]; ?>" max="<?php echo WAREHOUSE_CAPACITY; ?>"></td>
             </tr>
             <tr>
                 <td>Bvlgari</td>
-                <td><progress value="<?php echo $stats["Bvlgari"];?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+                <td><progress value="<?php echo $stats["Bvlgari"]; ?>" max="<?php echo WAREHOUSE_CAPACITY; ?>"></td>
             </tr>
         </table>
 

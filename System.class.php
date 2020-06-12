@@ -10,6 +10,7 @@ require_once("inc/Diptyque.class.php");
 require_once("inc/Jomalone.class.php");
 
 require_once("inc/Menufacture.class.php");
+require_once("inc/Warehouse.class.php");
 require_once("inc/FileAgent.class.php");
 require_once("inc/ItemParse.class.php");
 require_once("inc/Page.class.php");
@@ -17,10 +18,9 @@ require_once("inc/Page.class.php");
 FileAgent::readFile(PERFUME_FILE);
 $fileContents = FileAgent::getFileContents();
 
-//var_dump($fileContents);
+
 ItemParse::parsePerfumeData($fileContents);
 ItemParse::PerfumeArr();
-var_dump(ItemParse::getBurberryItems());
 
 // Get the array data
 $jomalonePerfumes = ItemParse::getJomaloneItems();
@@ -28,13 +28,30 @@ $bvlgariPerfumes = ItemParse::getBvlgariItems();
 $diptyquePerfumes = ItemParse::getDiptyqueItems();
 $burberryPerfumes = ItemParse::getBurberryItems();
 
-//
 Menufature::getPerfumes($jomalonePerfumes,$bvlgariPerfumes,$diptyquePerfumes,$burberryPerfumes);
+//Declare the class
 
-//Menufature::test();
+$perfumeMenufature = new Menufature();
+$perfumeItems = array();
+$perfumeWarehouse = new Warehouse();
+
+Page::setTitle("Perfume Warehouse Status Bar");
+Page::header();
 
 
-$p= Menufature::genRandomPerfume();
-var_dump($p);
+for($c=0; $c<=rand(0,50); $c++) {
+    $perfumeItems[] = $perfumeMenufature->genRandomPerfume();
+}
 
+
+foreach($perfumeItems as $perfumeItem) {
+    
+    $perfumeWarehouse->sortItem($perfumeItem);
+    
+}
+
+Page::DisplayWarehouse($perfumeWarehouse->getStats());
+
+
+Page::footer();
 ?>
