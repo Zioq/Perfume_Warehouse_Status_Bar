@@ -2,6 +2,12 @@
 
 
 class Page  {
+
+    static private $_title ="";
+
+    static public function setTitle(string $title) {
+        self::$_title =$title;
+    }
     static function header($title)    {  ?>
 
         <!doctype html>
@@ -20,6 +26,31 @@ class Page  {
             <h1><?php echo $title ?></h1>
 
  <?php   }
+
+    static function DisplayWarehouse(Array $stats) { ?>
+            
+            
+        <table>
+            <tr>
+                <td>Jo Malone</td>
+                <td><progress value="<?php echo $stats["Jomlaone"];?>" max="<?php echo BIN_CAPACITY;?>"></td>
+            </tr>
+            <tr>
+                <td>Diptyque</td>
+                <td><progress value="<?php echo $stats["Diqtyque"]; ?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+            </tr>
+            <tr>
+                <td>Burberry</td>  
+                <td><progress value ="<?php echo $stats["Burberry"];?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+            </tr>
+            <tr>
+                <td>Bvlgari</td>
+                <td><progress value="<?php echo $stats["Bvlgari"];?>" max="<?php echo BIN_CAPACITY; ?>"></td>
+            </tr>
+        </table>
+
+    <?php }
+
 
     static function footer()    { ?>
 
