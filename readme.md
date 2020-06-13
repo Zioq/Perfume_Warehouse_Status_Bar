@@ -3,3 +3,7 @@
 Used a rand function to generate random number of perfumes.
 
 We will import the perfume name data from csv file.
+
+Feel free to play around this code 
+Happy coding :)
+
